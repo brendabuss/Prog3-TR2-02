@@ -1,0 +1,32 @@
+body {
+    background-color: black;
+}
+
+img {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.CardLogin {
+    transition: 0.3s;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 10px;
+}
+
+footer {
+    text-align: left;
+    padding: 2px 2px 15px 10px;
+    background-image: linear-gradient(black, #0085fc);
+    color: white;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    font-size: 12px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
