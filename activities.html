@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shift - Atividades</title>
+    ,<!--<link rel="stylesheet" href="/css/activities.css">-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+<!-- Third Level Sidebar -->
+<nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark pmd-navbar pmd-z-depth">
+    <a href="javascript:void(0);" data-target="basicSidebar" data-placement="left" data-position="slidepush" is-open="true" is-open-width="1000" class="btn btn-sm pmd-btn-fab pmd-btn-flat pmd-ripple-effect pmd-sidebar-toggle"><i class="material-icons md-light">menu</i></a>
+    <a class="navbar-brand" href="/img/logo1.png"></a>
+
+    <!-- Navbar Right icon -->      
+    <div class="pmd-navbar-right-icon ml-auto"> 
+      <a href="javascript:void(0);" class="btn btn-sm pmd-btn-fab pmd-btn-flat pmd-ripple-effect"><i class="material-icons pmd-sm md-light">search</i></a>
+    </div>
+</nav>
+
+<section id="pmd-main">
+    <!-- Left sidebar -->
+    <aside id="basicSidebar" class="pmd-sidebar pmd-sidebar-dark bg-dark pmd-z-depth" role="navigation">
+        <ul class="nav flex-column pmd-sidebar-nav">
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="collapse" href="#inbox" role="button" aria-expanded="true" aria-controls="inbox">
+                    <i class="material-icons pmd-list-icon pmd-sm">inbox</i>
+                    <span class="media-body">Inbox</span>
+                    <i class="material-icons md-light ml-2 pmd-sm">more_vert</i>
+                </a>
+                <ul class="collapse show" id="inbox" data-parent="#basicSidebar">
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="collapse" href="#profile" role="button" aria-expanded="true" aria-controls="profile">
+                            <i class="material-icons pmd-list-icon pmd-sm">account_circle</i>
+                            <span class="media-body">View Profile</span>
+                            <i class="material-icons md-light ml-2 pmd-sm">more_vert</i>
+                        </a>
+                        <ul class="collapse show" id="profile">
+                            <li class="nav-item">
+                                <a class="nav-link" href="javascript:void(0);"><span class="media-body">Personal Information</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="javascript:void(0);"><span class="media-body">Educational Qualification</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="javascript:void(0);"><span class="media-body">Work and Experience</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="javascript:void(0);">
+                            <i class="material-icons pmd-list-icon pmd-sm">settings</i>
+                            <span class="media-body">Settings</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="javascript:void(0);">
+                            <i class="material-icons pmd-list-icon pmd-sm">settings_power</i>
+                            <span class="media-body">Logout</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="javascript:void(0);">
+                    <i class="material-icons pmd-list-icon pmd-sm">star</i>
+                    <span class="media-body">Stared</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="javascript:void(0);">
+                    <i class="material-icons pmd-list-icon pmd-sm">send</i>
+                    <span class="media-body">Sent Email</span>
+                </a>
+            </li>
+        </ul>
+    </aside>
+    <div class="pmd-sidebar-overlay"></div>
+    <!-- Start Content -->
+    <div class="pmd-content custom-pmd-content" id="content">
+      <div class="col-md-4">
+        <div class="row">
+        
+          <!-- ./col -->
+          <div class="col-xs-6">
+            <!-- small box -->
+            <div class="small-box bg-green">
+              <div class="inner">
+                <h3 id="number-activities">0</h3>
+        
+                <p>Atividades</p>
+              </div>
+              <div class="icon">
+                <i class="ion ion-person-add"></i>
+              </div>
+            </div>
+          </div>
+          <!-- ./col -->
+        </div>
+
+
+        <div class="box box-info" id="box-activity-create">
+          <div class="box-header with-border">
+            <h3 class="box-title">Nova Atividade</h3>
+          </div>
+          <!-- /.box-header -->
+          <!-- form start -->
+          <form class="form" id="form-activity-create">
+            <div class="box-body">
+              <div class="form-group">
+                  <label for="inputName">Nome</label>
+                  <div class="col-sm-10">
+                      <input type="text" class="form-control" id="inputName" name="name">
+                  </div>
+              </div>
+              <div class="form-group">
+                <label for="inputDate">Data</label>
+                <div class="col-sm-10">
+                  <input type="date" class="form-control" id="inputDate" name="date" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask="">
+                </div>
+              </div>
+              <div class="form-group">
+                  <label for="inputTime">Tempo Estimado</label>
+                  <div class="col-sm-10">
+                      <input type="time" class="form-control" id="inputTime" name="time">
+                  </div>
+              </div>
+              <div class="form-group">
+                <label for="inputDescritpion">Descrição</label>
+                <div class="col-sm-10">
+                    <textarea class="form-control" rows="3" id="inputDescritpion" name="description"></textarea>
+                </div>
+              </div>
+            </div>
+            <!-- /.box-body -->
+            <div class="box-footer">
+              <button type="reset" class="btn btn-default">Cancelar</button>
+              <button type="submit" class="btn btn-info pull-right">Adicionar</button>
+            </div>
+            <!-- /.box-footer -->
+          </form>
+        </div>
+
+        <div class="box box-info" id="box-activity-update" style="display:none;">
+          <div class="box-header with-border">
+            <h3 class="box-title">Editar Atividade</h3>
+          </div>
+          <!-- /.box-header -->
+          <!-- form start -->
+          <form class="form" id="form-activity-update">
+            <div class="box-body">
+              <div class="form-group">
+                  <label for="inputName">Nome</label>
+                  <div class="col-sm-10">
+                      <input type="text" class="form-control" id="inputName" name="name">
+                  </div>
+              </div>
+              <div class="form-group">
+                <label for="inputDate">Data</label>
+                <div class="col-sm-10">
+                  <input type="date" class="form-control" id="inputDate" name="date" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask="">
+                </div>
+              </div>
+              <div class="form-group">
+                  <label for="inputTime">Tempo Estimado</label>
+                  <div class="col-sm-10">
+                      <input type="time" class="form-control" id="inputTime" name="time">
+                  </div>
+              </div>
+              <div class="form-group">
+                <label for="inputDescritpion">Descrição</label>
+                <div class="col-sm-10">
+                    <textarea class="form-control" rows="3" id="inputDescritpion" name="description"></textarea>
+                </div>
+              </div>
+            </div>
+            <!-- /.box-body -->
+            <div class="box-footer">
+              <button type="reset" class="btn btn-default btn-cancel">Cancelar</button>
+              <button type="submit" class="btn btn-info pull-right">Editar</button>
+            </div>
+            <!-- /.box-footer -->
+          </form>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="col-xs-12">
+        <div class="box">
+          <div class="box-header">
+            <h3 class="box-title">Regitro de Atividades</h3>
+          </div>
+          <!-- /.box-header -->
+          <div class="box-body">
+            <div id="example2_wrapper" class="dataTables_wrapper form-inline dt-bootstrap"><div class="row"><div class="col-sm-6"></div><div class="col-sm-6"></div></div><div class="row"><div class="col-sm-12"><table id="example2" class="table table-bordered table-hover dataTable" role="grid" aria-describedby="example2_info">
+              <thead>
+              <tr role="row"><th class="sorting_asc" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-sort="ascending" aria-label="ID: activate to sort column descending">ID</th><th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Nome: activate to sort column ascending">Nome</th><th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Data: activate to sort column ascending">Data</th><th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Tempo: activate to sort column ascending">Tempo</th><th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Descrição: activate to sort column ascending">Descrição</th><th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Ações: activate to sort column ascending">Ações</th></tr>
+              </thead>
+              <tbody id="table-activities">
+                
+              </tbody>
+              <tfoot>
+              <tr><th rowspan="1" colspan="1">ID</th><th rowspan="1" colspan="1">Nome</th><th rowspan="1" colspan="1">Data</th><th rowspan="1" colspan="1">Tempo</th><th rowspan="1" colspan="1">Descrição</th><th rowspan="1" colspan="1">Ações</th></tr>
+              </tfoot>
+            </table></div></div><div class="row"><div class="col-sm-5"><div class="dataTables_info" id="example2_info" role="status" aria-live="polite">Mostrando 10 de 57 registros</div></div><div class="col-sm-7"><div class="dataTables_paginate paging_simple_numbers" id="example2_paginate"><ul class="pagination"><li class="paginate_button previous disabled" id="example2_previous"><a href="#" aria-controls="example2" data-dt-idx="0" tabindex="0">Previous</a></li><li class="paginate_button active"><a href="#" aria-controls="example2" data-dt-idx="1" tabindex="0">1</a></li><li class="paginate_button "><a href="#" aria-controls="example2" data-dt-idx="2" tabindex="0">2</a></li><li class="paginate_button "><a href="#" aria-controls="example2" data-dt-idx="3" tabindex="0">3</a></li><li class="paginate_button "><a href="#" aria-controls="example2" data-dt-idx="4" tabindex="0">4</a></li><li class="paginate_button "><a href="#" aria-controls="example2" data-dt-idx="5" tabindex="0">5</a></li><li class="paginate_button "><a href="#" aria-controls="example2" data-dt-idx="6" tabindex="0">6</a></li><li class="paginate_button next" id="example2_next"><a href="#" aria-controls="example2" data-dt-idx="7" tabindex="0">Next</a></li></ul></div></div></div></div>
+          </div>
+          <!-- /.box-body -->
+        </div>
+        <!-- /.box -->
+      </div>
+</section>
+
+<!-- Main Footer -->
+<footer class="main-footer">
+  <!-- To the right -->
+  <div class="pull-right hidden-xs">
+    <a target="_blank" href="#">FURB</a>
+  </div>
+  <!-- Default to the left -->
+  Trabalho desenvolvido pelos alunos Brenda Buss e Vitor Reiter
+</footer>
+<!--   Todos Scripts/Classes precisam ser informados para existirem durante a rotina-->
+<script src="model/Utils.js"></script>
+<script src="model/Activity.js"></script>
+<script src="controller/ActivityController.js"></script>
+<script src="activities.js"></script>
+</body>
+</html>
