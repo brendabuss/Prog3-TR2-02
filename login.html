@@ -3,8 +3,10 @@
 
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" type="text/css" href="estiloLogin.css">
-    <title></title>
+    <link data-vue-tag="ssr" rel="icon" type="image/png" sizes="16x16" href="logo2.png">
+    <title>Shift</title>
 </head>
 
 <body>
@@ -12,43 +14,61 @@
 
     <img src="logo1.png" alt="Logo" width="100" height="100">
 
-    <div class="CardLogin" style="width: 600px; height: 430px; background-color: white">
+    <div class="CardLogin" style="width: 400px; height: 430px; background-color: white">
 
+        <form style="max-width:320px;margin:auto">
+            <h2>Login</h2>
+            <div class="input-container">
+                <i class="material-icons">face</i>
+                <input class="nome_login" type="text" placeholder="meuemail@gmail.com" name="nome_login" style="font-style: italic;color: #949090">
+            </div>
 
+            <div class="input-container">
+                <i class="material-icons">vpn_key</i>
+                <input class="nome_login" type="password" placeholder="1234" name="psw" style="font-style: italic;color: #949090">
+            </div>
 
-        <div class="blocoLogin">
             <div id="login">
-                <h1>Login</h1>
-                <p>
-                    <label for="nome_login">Endereço de e-mail</label>
-                    <input id="nome_login" name="nome_login" type="text" placeholder="meuemail@gmail.com" style="font-style: italic;color: #949090" />
-                </p>
 
                 <p>
-                    <label for="email_login">Senha</label>
-                    <input id="email_login" name="email_login" type="password" placeholder="1234" style="font-style: italic;color: #949090" />
+                    <input type="submit" value="LOGAR" />
                 </p>
 
                 <p>
                     <input type="checkbox" id="manterlogado" value="" />
                     <label for="manterlogado">Manter-me logado</label>
+
                 </p>
 
-                <p>
-                    <input type="submit" value="Logar" />
+                <p class="linkEsqueceu">
+                    <a href="">Esqueceu sua senha?</a>
                 </p>
 
                 <p class="link">Ainda não tem conta?
                     <a href="">Cadastre-se</a>
                 </p>
-                </form>
-            </div>
+        </form>
+        </div>
 
+        <div class="CardInformacoes" style="width: 245px; height: 430px; background-color: #0085fc">
+            <h3>Bem-vindo ao Shift</h3>
+            <h1>O aplicativo Shift é o jeito mais fácil de cadastrar rotinas de trabalho: você cadastra suas filiais e seus colaboradores, depois basta incluir as atividades e pronto! Além disso, você também poderá emitir relatórios diários e mensais de todos
+                os apontamentos.
+            </h1>
+            <h1>Tudo em um CLIQUE! Faça login e utilize já!
+            </h1>
         </div>
     </div>
 
+
+    </form>
+
+
+
+
+
     <footer style=" height: 20px">
-        <p>Brenda Rodrigues Buss | Vitor Amarildo Krüger Reiter | Jean Carlos Naumann <br>
+        <p>Brenda Rodrigues Buss | Vitor Amarildo Krüger Reiter <br>
     </footer>
 
 </body>
