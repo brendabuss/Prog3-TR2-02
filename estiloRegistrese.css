@@ -3,7 +3,7 @@ body {
 }
 
 img {
-    position: absolute;
+    position: relative;
     top: 20px;
     left: 50%;
     transform: translateX(-50%);
@@ -11,9 +11,10 @@ img {
 
 .CardRegistrese {
     transition: 0.3s;
-    position: absolute;
+    position: relative;
     top: 20%;
     left: 50%;
+    margin-bottom: 20px;
     transform: translateX(-50%);
     border-radius: 10px;
 }
@@ -25,9 +26,12 @@ h2 {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     text-align: center;
     padding-bottom: 0px;
+    position: relative;
+    top: 10px;
 }
 
 h2:after {
+    position: relative;
     content: ' ';
     display: block;
     width: 100%;
@@ -52,6 +56,9 @@ a {
     margin-bottom: 15px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 14px;
+    position: relative;
+    top: 10px;
+    right: 100px;
 }
 
 input[type="submit"] {
@@ -79,6 +86,8 @@ input:not([type="checkbox"]) {
     -webkit-transition: all 0.2s linear;
     transition: all 0.2s linear;
     outline: none;
+    border-radius: 5px;
+    padding: 10px;
 }
 
 footer {
@@ -86,9 +95,9 @@ footer {
     padding: 2px 2px 15px 10px;
     background-image: linear-gradient(black, #0085fc);
     color: white;
-    position: fixed;
-    left: 0;
-    bottom: 0;
+    position: relative;
+    left: -8px;
+    bottom: -13px;
     width: 100%;
     font-size: 12px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
