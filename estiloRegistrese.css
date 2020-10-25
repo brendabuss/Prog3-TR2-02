@@ -3,24 +3,28 @@ body {
 }
 
 img {
-    position: relative;
+    position: absolute;
     top: 20px;
-    left: 50%;
+    left: 50.6%;
+    padding-bottom: 10px;
     transform: translateX(-50%);
 }
 
 .CardRegistrese {
     transition: 0.3s;
-    position: relative;
+    position: absolute;
     top: 20%;
-    left: 50%;
+    left: 50.5%;
     margin-bottom: 20px;
     transform: translateX(-50%);
     border-radius: 10px;
+    z-index: 1;
+    margin-bottom: 50px;
+    clear: both;
 }
 
 h2 {
-    margin-top: 5%;
+    margin-top: 1%;
     font-size: 20px;
     color: #b1abab;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -44,6 +48,8 @@ h2:after {
 label {
     color: #7f7c7c;
     position: relative;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 14px;
 }
 
 a {
@@ -58,7 +64,15 @@ a {
     font-size: 14px;
     position: relative;
     top: 10px;
-    right: 100px;
+}
+
+.estados {
+    border: 1px solid #b1abab;
+    left: 0px;
+    border-radius: 5px;
+    display: flex;
+    padding-left: 10px;
+    margin-top: 10px;
 }
 
 input[type="submit"] {
@@ -81,13 +95,27 @@ input[type="submit"]:hover {
 }
 
 input:not([type="checkbox"]) {
-    width: 100%;
+    width: 97%;
     border: 1px solid #b1abab;
     -webkit-transition: all 0.2s linear;
     transition: all 0.2s linear;
     outline: none;
     border-radius: 5px;
-    padding: 10px;
+    margin-top: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: -10px;
+    padding-left: 10px;
+}
+
+input:not([type="checkbox"]):focus {
+    box-shadow: 0px 0px 2px 1px #0085fc inset;
+    border: 1px solid #0085fc;
+}
+
+.estados:focus {
+    box-shadow: 0px 0px 2px 1px #0085fc inset;
+    border: 1px solid #0085fc;
 }
 
 footer {
@@ -95,10 +123,44 @@ footer {
     padding: 2px 2px 15px 10px;
     background-image: linear-gradient(black, #0085fc);
     color: white;
-    position: relative;
-    left: -8px;
-    bottom: -13px;
-    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: -400px;
+    overflow: hidden;
+    width: 99%;
     font-size: 12px;
+    clear: both;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+p {
+    margin-bottom: 15px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 12px;
+}
+
+.link {
+    position: absolute;
+    color: #7f7c7c;
+    margin-top: 0%;
+    font-size: 12px;
+    text-align: right;
+    width: 85%;
+}
+
+.link a {
+    font-weight: bold;
+    background: #b1abab;
+    padding: 7px 10px;
+    color: #fff;
+    border: 1px solid #b1abab;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.link a:hover {
+    color: #fff;
+    border: 1px solid #0085fc;
+    background: #0085fc;
 }

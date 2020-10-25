@@ -1,4 +1,5 @@
 <!DOCTYPE HTML>
+
 <html lang="pt-br">
 
 <head>
@@ -7,6 +8,23 @@
     <link rel="stylesheet" type="text/css" href="estiloLogin.css">
     <link data-vue-tag="ssr" rel="icon" type="image/png" sizes="16x16" href="logo2.png">
     <title>Shift</title>
+
+    <script>
+        function verificaLogin() {
+            sessionStorage.email = document.querySelector('#nome_login').value;
+            sessionStorage.senha = document.querySelector('#senha_login').value;
+
+            if (sessionStorage.email === "admin" && sessionStorage.senha === "admin") {
+                window.open("activities.html");
+            } else {
+                if (sessionStorage.email === "" || sessionStorage.senha === "") {
+                    alert("Campos em branco");
+                } else {
+                    alert("Senha inválida");
+                }
+            }
+        }
+    </script>
 </head>
 
 <body>
@@ -20,18 +38,18 @@
             <h2>Login</h2>
             <div class="input-container">
                 <i class="material-icons">face</i>
-                <input class="nome_login" type="text" placeholder="meuemail@gmail.com" name="nome_login" style="font-style: italic;color: #949090">
+                <input id="nome_login" class="nome_login" type="text" placeholder="Digite seu e-mail" name="nome_login" style="font-style: italic;color: #949090; margin-left: -5px;">
             </div>
 
             <div class="input-container">
                 <i class="material-icons">vpn_key</i>
-                <input class="nome_login" type="password" placeholder="1234" name="psw" style="font-style: italic;color: #949090">
+                <input id="senha_login" class="senha_login" type="password" placeholder="Digite sua senha" name="psw" style="font-style: italic;color: #949090; margin-left: -5px;">
             </div>
 
             <div id="login">
 
                 <p>
-                    <input type="submit" value="LOGAR" />
+                    <input id="logar" type="submit" onclick="verificaLogin()" value="LOGAR" />
                 </p>
 
                 <p>
